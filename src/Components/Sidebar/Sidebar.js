@@ -28,7 +28,7 @@ const Sidebar = ({cart}) => {
                 <hr />
                 
                 <div>
-                    <h3>Add A Break</h3>
+                    <h3 className='font-bold mt-8 mb-4'>Add A Break</h3>
                     <div className='bg-sky-200 py-2 w-3/5 mx-auto rounded-xl'>
                         <button onClick={()=>handleBreakTime('5')} className=" mr-2 btn bg-white text-black border-0 btn-circle">5m</button>
                         <button onClick={()=>handleBreakTime('10')} className=" mr-2 btn  bg-white text-black border-0 btn-circle">10m</button>
@@ -38,9 +38,9 @@ const Sidebar = ({cart}) => {
                     </div>
                 </div>
                 <div>
-                    <h3>Cook Details</h3>
-                    <p>Cook Time: {time} min</p>
-                    <p>Break Time: {brkTime} min</p>
+                    <h3 className='font-bold text-xl mt-8 mb-3'>Cook Details</h3>
+                    <p className='font-bold'>Cook Time: {time} min</p>
+                    <p className='font-bold'>Break Time: {brkTime} min</p>
                 </div>
                 <div>
                     <button onClick={handleToast} className='btn bg-sky-200 border-0 text-black font-bold my-6'>Activity Complited</button>
