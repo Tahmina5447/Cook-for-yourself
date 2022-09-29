@@ -6,7 +6,7 @@ const Sidebar = ({cart}) => {
     for(const info of cart){
         time=parseInt(time)+parseInt(info.time);
     }
-    
+
     return (
         <div className='text-center bg-red-200 rounded-xl'>
             <div>
@@ -29,7 +29,7 @@ const Sidebar = ({cart}) => {
                 </div>
                 <div>
                     <h3>Cook Details</h3>
-                    <p>Cook Time:  min</p>
+                    <p>Cook Time: {time} min</p>
                     <p>Break Time</p>
                 </div>
                 <div>

@@ -6,7 +6,7 @@ import Sidebar from './Components/Sidebar/Sidebar';
 import { useState } from 'react';
 
 function App() {
-  const[cart,setCart]=useState([0]);
+  const[cart,setCart]=useState([]);
   
   const handleAddBtn=(singleInfo)=>{
     // console.log(singleInfo)
