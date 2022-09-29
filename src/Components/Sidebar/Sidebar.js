@@ -1,10 +1,15 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Sidebar = ({cart}) => {
 
     let time=0;
     for(const info of cart){
         time=parseInt(time)+parseInt(info.time);
+    }
+
+    const handleToast=()=>{
+        toast("Successful");
     }
 
     return (
@@ -33,7 +38,8 @@ const Sidebar = ({cart}) => {
                     <p>Break Time</p>
                 </div>
                 <div>
-                    <button className='btn bg-sky-200 border-0 text-black font-bold my-6'>Activity Complited</button>
+                    <button onClick={handleToast} className='btn bg-sky-200 border-0 text-black font-bold my-6'>Activity Complited</button>
+                    <ToastContainer />
                 </div>
 
             </div>

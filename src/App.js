@@ -6,6 +6,7 @@ import AllCards from './Components/AllCards/AllCards';
 import Questions from './Components/Questions/Questions';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const[cart,setCart]=useState([]);
@@ -14,6 +15,7 @@ function App() {
     // console.log(singleInfo)
     const newCart=[...cart,singleInfo];
     setCart(newCart);
+    
   }
   
   return (
@@ -22,9 +24,11 @@ function App() {
       <div className='flex'>
         <div className='w-3/5 text-center '>
           <AllCards handleAddBtn={handleAddBtn}></AllCards>
+          
         </div>
         <div className='w-2/5 text-center'>
           <Sidebar cart={cart}></Sidebar>
+          
         </div>
       </div>
       <div className='bg-sky-200 rounded-xl'>
