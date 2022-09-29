@@ -1,0 +1,44 @@
+[
+    {
+        "id":"01",
+        "img":"./images/item1.jpg",
+        "name":"Noodles",
+        "time":"5"
+    
+    },
+    {
+        "id":"02",
+        "img":"./images/item2.jpg",
+        "name":"Egg Omelette",
+        "time":"2"
+    
+    },
+    {
+        "id":"03",
+        "img":"./images/item3.jpg",
+        "name":"Cake",
+        "time":"45"
+    
+    },
+    {
+        "id":"04",
+        "img":"./images/item4.jpg",
+        "name":"Vegetable Curry",
+        "time":"20"
+    
+    },
+    {
+        "id":"05",
+        "img":"./images/item5.jpg",
+        "name":"Meat",
+        "time":"60"
+    
+    },
+    {
+        "id":"06",
+        "img":"./images/item6.jpg",
+        "name":"Salad",
+        "time":"3"
+    
+    }
+]
