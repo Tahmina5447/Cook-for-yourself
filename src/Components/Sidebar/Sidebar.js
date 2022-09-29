@@ -2,7 +2,11 @@ import React from 'react';
 
 const Sidebar = ({cart}) => {
 
-
+    let time=0;
+    for(const info of cart){
+        time=parseInt(time)+parseInt(info.time);
+    }
+    
     return (
         <div className='text-center bg-red-200 rounded-xl'>
             <div>
