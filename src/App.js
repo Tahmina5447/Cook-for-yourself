@@ -9,6 +9,7 @@ function App() {
   const[cart,setCart]=useState([]);
   
   const handleAddBtn=(singleInfo)=>{
+    // console.log(singleInfo)
     const newCart=[...cart,singleInfo];
     setCart(newCart);
   }
