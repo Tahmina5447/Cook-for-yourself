@@ -21,12 +21,13 @@ function App() {
   return (
     <div className='px-10'>
       <h1 className='text-4xl text-red-700 font-bold text-center py-10'> <FontAwesomeIcon className='mr-4' icon={faCoffee} />Cook For Yourself</h1>
-      <div className='flex'>
-        <div className='w-3/5 text-center '>
+      <p className='text-blue-700 text-xl font-bold my-6 mx-4'>Select Today's Recipe</p>
+      <div className='lg:flex'>
+        <div className='lg:w-3/5 text-center '>
           <AllCards handleAddBtn={handleAddBtn}></AllCards>
           
         </div>
-        <div className='w-2/5 text-center'>
+        <div className='lg:w-2/5 text-center'>
           <Sidebar cart={cart}></Sidebar>
           
         </div>

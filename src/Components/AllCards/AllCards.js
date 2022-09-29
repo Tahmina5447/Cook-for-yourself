@@ -13,11 +13,14 @@ const AllCards = ({handleAddBtn}) => {
   },[])
 
     return (
-        <div className='grid grid-cols-3 gap-6 px-8'>
+      
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 px-8 mb-4 '>
             {
                 info.map(singleInfo=><SingleCard  handleAddBtn={handleAddBtn} singleInfo={singleInfo}></SingleCard>)
             }
-        </div>
+        </div>  
+      
+       
     );
 };
 

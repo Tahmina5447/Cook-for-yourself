@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Sidebar = ({cart}) => {
+    const[brkTime,setBrkTime]=useState(0);
 
     let time=0;
     for(const info of cart){
@@ -10,6 +11,10 @@ const Sidebar = ({cart}) => {
 
     const handleToast=()=>{
         toast("Successful");
+    }
+
+    const handleBreakTime=(brkTime)=>{
+        setBrkTime(brkTime);
     }
 
     return (
@@ -25,17 +30,17 @@ const Sidebar = ({cart}) => {
                 <div>
                     <h3>Add A Break</h3>
                     <div className='bg-sky-200 py-2 w-3/5 mx-auto rounded-xl'>
-                        <button className=" mr-2 btn bg-white text-black border-0 btn-circle">5m</button>
-                        <button className=" mr-2 btn  bg-white text-black border-0 btn-circle">10m</button>
-                        <button className="btn mr-2  bg-white text-black border-0 btn-circle">15m</button>
-                        <button className="btn mr-2 bg-white text-black border-0 btn-circle">20m</button>
-                        <button className="btn  bg-white text-black border-0 btn-circle">25m</button>
+                        <button onClick={()=>handleBreakTime('5')} className=" mr-2 btn bg-white text-black border-0 btn-circle">5m</button>
+                        <button onClick={()=>handleBreakTime('10')} className=" mr-2 btn  bg-white text-black border-0 btn-circle">10m</button>
+                        <button onClick={()=>handleBreakTime('15')} className="btn mr-2  bg-white text-black border-0 btn-circle">15m</button>
+                        <button onClick={()=>handleBreakTime('20')} className="btn mr-2 bg-white text-black border-0 btn-circle">20m</button>
+                        <button onClick={()=>handleBreakTime('25')} className="btn  bg-white text-black border-0 btn-circle">25m</button>
                     </div>
                 </div>
                 <div>
                     <h3>Cook Details</h3>
                     <p>Cook Time: {time} min</p>
-                    <p>Break Time</p>
+                    <p>Break Time: {brkTime} min</p>
                 </div>
                 <div>
                     <button onClick={handleToast} className='btn bg-sky-200 border-0 text-black font-bold my-6'>Activity Complited</button>
